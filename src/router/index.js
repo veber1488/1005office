@@ -53,7 +53,20 @@ export const constantRouterMap = [
       name: 'documentation',
       meta: { title: 'documentation', icon: 'documentation', noCache: true }
     }]
-  }
+    },
+    {
+      path: '/net_off_config',
+      component: Layout,
+      redirect: '/netOffConfig/index',
+      children: [{
+        path: 'index',
+        // component: _import('documentation/index'),
+        component: () => import('@/views/netOffConfig/index'),
+        name: 'NetOfflineConfig',
+        meta: { title: 'NetOfflineConfig', icon: 'documentation', noCache: true }
+      }]
+    }
+
 ]
 
 export default new Router({
@@ -64,13 +77,13 @@ export default new Router({
 
 export const asyncRouterMap = [
   {
-    path: '/permission',
+    path: '/net_off_config',
     component: Layout,
-    redirect: '/permission/index',
+    redirect: '/netOffConfigAddDev/index',
     alwaysShow: true, // will always show the root menu
     meta: {
-      title: 'permission',
-      icon: 'lock',
+      title: 'NetOfflineConfig',
+      icon: 'documentation',
       roles: ['admin', 'editor'] // you can set roles in root nav
     },
     children: [{
