@@ -65,6 +65,18 @@ export const constantRouterMap = [
         name: 'NetOfflineConfig',
         meta: { title: 'NetOfflineConfig', icon: 'documentation', noCache: true }
       }]
+    },
+    {
+      path: '/net_off_config/addDevice',
+      component: Layout,
+      redirect: '/netOffConfig/',
+      children: [{
+        path: 'index',
+        // component: _import('documentation/index'),
+        component: () => import('@/views/netOffConfig/AddDevice'),
+        name: 'NetOfflineConfig1',
+        meta: { title: 'AddDevice', icon: 'documentation', noCache: true }
+      }]
     }
 
 ]

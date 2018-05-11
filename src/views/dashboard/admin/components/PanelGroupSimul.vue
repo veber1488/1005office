@@ -1,16 +1,14 @@
 <template>
-
   <el-row class="panel-group" :gutter="40" style="background-color: #dfe4ea;">
-    <!-- <h2 style="display: flex; text-align: center; justify-content: center;
-  align-items: center; color: #2c3e50;" >FILE</h2> -->
-<h1 style="display: flex; justify-content: center; align-items: center; color: #34495e; letter-spacing: 0.3em;">FILE</h1>
+    <h1 style="display: flex; justify-content: center; align-items: center; color: #34495e; letter-spacing: 0.3em;">SIMULATION</h1>
     <el-col :xs="12" :sm="12" :lg="6" class="card-panel-col">
       <div class='card-panel' @click="handleSetLineChartData('newVisitis')">
         <div class="card-panel-icon-wrapper icon-people">
           <svg-icon icon-class="peoples" class-name="card-panel-icon" />
+          <icon name="beer"></icon>
         </div>
         <div class="card-panel-description">
-          <div class="card-panel-text">New</div>
+          <div class="card-panel-text">empty</div>
           <!-- <count-to class="card-panel-num" :startVal="0" :endVal="102400" :duration="2600"></count-to> -->
         </div>
       </div>
@@ -21,7 +19,7 @@
           <svg-icon icon-class="message" class-name="card-panel-icon" />
         </div>
         <div class="card-panel-description">
-          <div class="card-panel-text">open</div>
+          <div class="card-panel-text">empty</div>
           <!-- <count-to class="card-panel-num" :startVal="0" :endVal="81212" :duration="3000"></count-to> -->
         </div>
       </div>
@@ -32,56 +30,12 @@
           <svg-icon icon-class="money" class-name="card-panel-icon" />
         </div>
         <div class="card-panel-description">
-          <div class="card-panel-text">save</div>
+          <div class="card-panel-text">empty</div>
           <!-- <count-to class="card-panel-num" :startVal="0" :endVal="9280" :duration="3200"></count-to> -->
         </div>
       </div>
     </el-col>
     <el-col :xs="12" :sm="12" :lg="6" class="card-panel-col">
-      <div class="card-panel" @click="handleSetLineChartData('shoppings')">
-        <div class="card-panel-icon-wrapper icon-shoppingCard">
-          <svg-icon icon-class="shoppingCard" class-name="card-panel-icon" />
-        </div>
-        <div class="card-panel-description">
-          <div class="card-panel-text">compare</div>
-          <!-- <count-to class="card-panel-num" :startVal="0" :endVal="13600" :duration="3600"></count-to> -->
-        </div>
-      </div>
-    </el-col>
-     <el-col :xs="12" :sm="12" :lg="6" class="card-panel-col">
-      <div class="card-panel" @click="handleSetLineChartData('shoppings')">
-        <div class="card-panel-icon-wrapper icon-shoppingCard">
-          <svg-icon icon-class="shoppingCard" class-name="card-panel-icon" />
-        </div>
-        <div class="card-panel-description">
-          <div class="card-panel-text" style="display: flex; justify-content: center; align-items: center;">create bom</div>
-          <!-- <count-to class="card-panel-num" :startVal="0" :endVal="13600" :duration="3600"></count-to> -->
-        </div>
-      </div>
-    </el-col>
-     <el-col :xs="12" :sm="12" :lg="6" class="card-panel-col">
-      <div class="card-panel" @click="handleSetLineChartData('shoppings')">
-        <div class="card-panel-icon-wrapper icon-shoppingCard">
-          <svg-icon icon-class="shoppingCard" class-name="card-panel-icon" />
-        </div>
-        <div class="card-panel-description">
-          <div class="card-panel-text">empty</div>
-          <!-- <count-to class="card-panel-num" :startVal="0" :endVal="13600" :duration="3600"></count-to> -->
-        </div>
-      </div>
-    </el-col>
-     <el-col :xs="12" :sm="12" :lg="6" class="card-panel-col">
-      <div class="card-panel" @click="handleSetLineChartData('shoppings')">
-        <div class="card-panel-icon-wrapper icon-shoppingCard">
-          <svg-icon icon-class="shoppingCard" class-name="card-panel-icon" />
-        </div>
-        <div class="card-panel-description">
-          <div class="card-panel-text">empty</div>
-          <!-- <count-to class="card-panel-num" :startVal="0" :endVal="13600" :duration="3600"></count-to> -->
-        </div>
-      </div>
-    </el-col>
-     <el-col :xs="12" :sm="12" :lg="6" class="card-panel-col">
       <div class="card-panel" @click="handleSetLineChartData('shoppings')">
         <div class="card-panel-icon-wrapper icon-shoppingCard">
           <svg-icon icon-class="shoppingCard" class-name="card-panel-icon" />
@@ -122,8 +76,8 @@ export default {
     position: relative;
     overflow: hidden;
     color: #666;
-    background: #16a085;
-    box-shadow: 4px 4px 40px rgba(0, 0, 0, .45);
+    background: #3498db;
+    box-shadow: 4px 4px 40px rgba(0, 0, 0, .55);
     border-color: rgba(0, 0, 0, .05);
     &:hover {
       .card-panel-icon-wrapper {
@@ -143,16 +97,16 @@ export default {
       }
     }
     .icon-people {
-      color: #34495e;
+      color: #40c9c6;
     }
     .icon-message {
-      color: #34495e;
+      color: #36a3f7;
     }
     .icon-money {
-      color: #34495e;
+      color: #f4516c;
     }
     .icon-shoppingCard {
-      color: #34495e
+      color: #34bfa3
     }
     .card-panel-icon-wrapper {
       float: left;
@@ -168,7 +122,7 @@ export default {
     .card-panel-description {
       float: center;
       display: flex; text-align: center; justify-content: center;
-  align-items: center;
+      align-items: center;
       font-weight: bold;
       margin-top: 35px;
       margin-left: 12px;
@@ -181,9 +135,6 @@ export default {
         font-size: 24px;
         margin-bottom: 12px;
         text-transform: uppercase;
-      }
-      .card-panel-num {
-        font-size: 20px;
       }
     }
   }

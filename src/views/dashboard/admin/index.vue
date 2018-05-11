@@ -1,8 +1,11 @@
 <template>
   <div class="dashboard-editor-container">
-    <github-corner></github-corner>
-
+    <!-- <github-corner></github-corner> -->
     <panel-group @handleSetLineChartData="handleSetLineChartData"></panel-group>
+    <panel-group-net></panel-group-net>
+    <panel-group-simul></panel-group-simul>
+
+   
 
     <el-row style="background:#fff;padding:16px 16px 0;margin-bottom:32px;">
       <line-chart :chart-data="lineChartData"></line-chart>
@@ -42,8 +45,10 @@
 </template>
 
 <script>
-import GithubCorner from '@/components/GithubCorner'
+// import GithubCorner from '@/components/GithubCorner'
 import PanelGroup from './components/PanelGroup'
+import PanelGroupNet from './components/PanelGroupNet'
+import PanelGroupSimul from './components/PanelGroupSimul'
 import LineChart from './components/LineChart'
 import RaddarChart from './components/RaddarChart'
 import PieChart from './components/PieChart'
@@ -74,7 +79,9 @@ const lineChartData = {
 export default {
   name: 'dashboard-admin',
   components: {
-    GithubCorner,
+    // GithubCorner,
+    PanelGroupSimul,
+    PanelGroupNet,
     PanelGroup,
     LineChart,
     RaddarChart,

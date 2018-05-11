@@ -1,7 +1,7 @@
 <template>
   <div class="app-container documentation-container">
  <v-app id="inspire">
-   <v-card style="background-color: #34495e; color: #bdc3c7;"><h1 class="display-2">Net Offline Configuration: <strong>Actions</strong></h1><h3 class="headline">To select the desired action, press the button below</h3></v-card>
+   <v-card style="background-color: #34495e; color: #bdc3c7;"><h1 class="display-1">Net Offline Configuration: <strong>Actions</strong></h1><h3 class="headline">To select the desired action, press the button below</h3></v-card>
    
     <v-layout row justify-center>
       <v-btn color="primary" dark large @click.native.stop="dialog = true" style="width: 200px;" class="headline">Actions</v-btn>
@@ -11,11 +11,12 @@
         <v-container fluid grid-list-md style="color: black;">
       <v-layout row wrap>
         <v-flex d-flex xs12 sm6 md2 style="color: black;">
+          <router-link to="/net_off_config/addDevice">
           <v-card color="grey lighten-2" dark class="grow">
             <v-card-title primary class="title" style="color: black;">Add Devices</v-card-title>
             <hr>
             <v-card-text style="color: black;">{{ lorem }}</v-card-text>
-          </v-card>
+          </v-card></router-link>
         </v-flex>
         <v-flex d-flex xs12 sm6 md2>
           <v-card color="grey lighten-2" dark class="grow">
@@ -39,11 +40,12 @@
           </v-card>
         </v-flex>
         <v-flex d-flex xs12 sm6 md2>
+          <router-link to="/dashboard">
           <v-card color="grey lighten-2" dark class="grow">
             <v-card-title primary class="title" style="color: black;">Add E1 Ring</v-card-title>
             <hr>
             <v-card-text>{{ lorem }}</v-card-text>
-          </v-card>
+          </v-card></router-link>
         </v-flex>
         <v-flex d-flex xs12 sm6 md2>
           <v-card color="grey lighten-2" dark class="grow">
