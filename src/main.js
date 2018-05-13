@@ -4,9 +4,11 @@ import 'normalize.css/normalize.css'// A modern alternative to CSS resets
 
 import Element from 'element-ui'
 import Vuetify from 'vuetify'
- 
+// import PrettyCheckbox from 'pretty-checkbox-vue'
 
 import 'element-ui/lib/theme-chalk/index.css'
+
+// import 'pretty-checkbox/src/pretty-checkbox.scss'
 
 import '@/styles/index.scss' // global css
 import 'vuetify/dist/vuetify.min.css'
@@ -22,6 +24,8 @@ import './permission' // permission control
 import './mock' // simulation data
 
 import * as filters from './filters' // global filters
+
+// Vue.use(PrettyCheckbox)
 
 Vue.use(Vuetify)
 Vue.use(Element, {

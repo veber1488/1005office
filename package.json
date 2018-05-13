@@ -40,6 +40,7 @@
     "mockjs": "1.0.1-beta3",
     "normalize.css": "7.0.0",
     "nprogress": "0.2.0",
+    "pretty-checkbox-vue": "^1.1.8",
     "screenfull": "3.3.2",
     "showdown": "1.8.5",
     "simplemde": "1.11.2",
