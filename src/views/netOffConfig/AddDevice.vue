@@ -23,7 +23,7 @@
      
       
     </section>
-   <div class="empty-cases-header"><h2 style="letter-spacing: 0.2em; margin-left: 20px">User's Library</h2> <div><el-button v-if="checkedDev1 || checkedDev2 || checkedDev3 || checkedDev4 || checkedDev5 || checkedDev6 || checkedDev7 || checkedDev8" style=" margin-right: 20px" type="success">Description</el-button><el-button style=" margin-right: 20px;" type="primary">View all</el-button></div>
+   <div class="empty-cases-header"><h2 style="letter-spacing: 0.2em; margin-left: 20px">User's Library</h2> <div><transition name="bounce"><el-button v-if="checkedDev1 || checkedDev2 || checkedDev3 || checkedDev4 || checkedDev5 || checkedDev6 || checkedDev7 || checkedDev8" style=" margin-right: 20px" type="success">Description</el-button></transition><el-button style=" margin-right: 20px;" type="primary">View all</el-button></div>
     </div> 
     <section class="card">
        <div class="card--content" @click="checkedDev1 = !checkedDev1"><div class="card-header"><h3 class="card-header-item card-header-item1">DevType1</h3><el-checkbox class="card-header-item2" v-model="checkedDev1"></el-checkbox></div>
@@ -43,7 +43,7 @@
       <div class="card--content" @click="checkedDev8 = !checkedDev8"><div class="card-header"><h3 class="card-header-item card-header-item1">DevType8</h3><el-checkbox class="card-header-item2" v-model="checkedDev8"></el-checkbox></div>
       <img src="/src/views/netOffConfig/san_controller.svg" width="190" height="auto" alt="image description"></div>
     </section>
-    <div class="empty-cases-header"><h2 style="letter-spacing: 0.2em; margin-left: 20px">УПАСК</h2> <div><el-button v-if="checkedUp1 || checkedUp2 || checkedUp3 || checkedUp4 || checkedUp5 || checkedUp6 || checkedUp7 || checkedUp8" style=" margin-right: 20px;" type="success">Description</el-button>
+    <div class="empty-cases-header"><h2 style="letter-spacing: 0.2em; margin-left: 20px">УПАСК</h2> <div><transition name="bounce"><el-button v-if="checkedUp1 || checkedUp2 || checkedUp3 || checkedUp4 || checkedUp5 || checkedUp6 || checkedUp7 || checkedUp8" style=" margin-right: 20px;" type="success">Description</el-button></transition>
     <el-button style=" margin-right: 20px;" type="primary">View all</el-button></div>
     </div> 
     <section class="card">
@@ -153,6 +153,10 @@ computed: {
   justify-content: space-between;
 }
 
+.card-header::-webkit-scrollbar {
+  display: none;
+}
+
 .card-header-item1 {
   flex: 4;
 }
@@ -203,7 +207,7 @@ computed: {
   animation: bounce-in .8s;
 }
 .bounce-leave-active {
-  animation: bounce-in .8s reverse;
+  animation: bounce-in .4s reverse;
 }
 @keyframes bounce-in {
   0% {
